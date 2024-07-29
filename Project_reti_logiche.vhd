@@ -1,13 +1,13 @@
 ----------------------------------------------------------------------------------
--- Universit‡: Politecnico di Milano
--- Autore: Jie Chen
+-- Universit√†: Politecnico di Milano
+-- Autore: JieCver1
 -- 
 -- Create Date: 03/05/2024 10:26:34 AM
 -- Module Name: project_reti_logiche - project_reti_logiche_arch
 -- Project Name: Prova Finale di Reti Logiche anno accademico 2023-2024
 ----------------------------------------------------------------------------------
 
--- L'elenco delle entit‡ usate:
+-- L'elenco delle entit√† usate:
 
 -- Lettore_address: legge i_add in ingresso e manda in output o_mem_addr
 library IEEE;
@@ -36,7 +36,7 @@ begin
           if i_rst='1' then --se reset=1, allora ripristina il registro.
               stored_value<="0000000000000000";
           elsif i_clk'event and i_clk='1' then 
-              if sel='1'  then -- sel='1' segna la partenza, dove output Ë uguale a input.
+              if sel='1'  then -- sel='1' segna la partenza, dove output √® uguale a input.
                         stored_value<=input;
               else -- sel='0' per i successivi indirizzi
                  if enable='1' then -- enable='1' allora incrementa l'indirizzo
@@ -110,7 +110,7 @@ begin
      
 end Modificatore_sequenza_arch;
 
--- Modificatore_cred: serve per completare sequenza con le credibilit‡
+-- Modificatore_cred: serve per completare sequenza con le credibilit√†
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
@@ -159,7 +159,7 @@ end process;
 end Modificatore_cred;
 
 
---Verificatore_zero: serve per verificare se i_mem_data Ë uguale a zero oppure no
+--Verificatore_zero: serve per verificare se i_mem_data √® uguale a zero oppure no
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
